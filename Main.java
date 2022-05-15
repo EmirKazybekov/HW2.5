@@ -1,15 +1,33 @@
-package def;
+import java.util.Scanner;
 
 public class Main {
+	
+	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		Son1 Robby = new Son1("Robby", 20);	
-		Son2 Bob = new Son2("Bob", 19);
-		Son3 Rob = new Son3("Rob", 18);
 		
-		System.out.println(Robby);
-		System.out.println(Bob);
-		System.out.println(Rob);
+		
+		System.out.println("Введите 1 если хотите ввести круг или введите что-то(именно число) если хотите квадрат");
+		int a = sc.nextInt();
+		 
+		if (a == 1) {
+			Сircle crObj = new Сircle();
+			System.out.println("Введите из каких символов будет фигура");
+			char c = sc.next().charAt(0);
+			crObj.setSybol(c);
+			crObj.draw(crObj.getSybol());
+			
+
+		}else {
+			Square sqObj = new Square();			
+			System.out.println("Введите из каких символов будет фигура");
+			char c = sc.next().charAt(0);
+			sqObj.setSybol(c);
+			sqObj.draw(sqObj.getSybol());
+		}
+		
+		
+
 
 	}
 
